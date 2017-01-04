@@ -6,17 +6,15 @@ A nodejs library to interact with the Excelvan (and possibly other) escpos print
 
 ## Getting started
 
-Clone the repo `git clone https://github.com/carlevans719/node-excelvan.git`.
-
 Install dependencies:
-- _windows_  Install [Zagig](http://sourceforge.net/projects/libwdi/files/zadig/) then install a driver for the printer
+- Windows  Install [Zagig](http://sourceforge.net/projects/libwdi/files/zadig/) then install a driver for the printer
 - Linux/Mac `sudo apt-get install libudev-dev`
 
-Then: `npm install`
+Install the module `npm install --save node-excelvan`
 
 Plug in the printer.
 ```js
-const { Printer, PrintJob } = require( './escpos.js' );
+const { Printer, PrintJob } = require( 'node-excelvan' );
 
 let myPrinter = new Printer(); // Optionally pass in the manufacturer & vendor ID(s)
 let myPrintJob = new PrintJob();
@@ -31,7 +29,7 @@ myPrinter.print(myPrintJob); // Send the job to the printer
 ## Usage
 
 ```js
-const { Printer, PrintJob } = require( './escpos.js' );
+const { Printer, PrintJob } = require( 'node-excelvan' );
 
 let myPrinter = new Printer();
 let myPrintJob = new PrintJob();
@@ -65,71 +63,85 @@ myPrinter.print( myPrintJob, function () {
 
 ## PrintJob
 
-- #### text
+- *text*
  _param: text { String } The text to print_
+
 
  adds plain text to the output
 
-- #### newLine
+- *newLine*
  _param: count { Number } How many new lines to print_
+
 
  prints a newline character
 
-- #### pad
+- *pad*
  _param: count { Number } How much white-space (in vertical units)_
+
 
  adds vertical white-space
 
-- #### setTextFormat
+- *setTextFormat*
  _param: format { String } The format to set_
+
 
  __(coming soon)__ set various aspects of font
 
-- #### setFont
+- *setFont*
  _param: font { String } The font to use. Either 'A' or 'B'_
+
 
  choose font A or font B
 
-- #### setBold
+- *setBold*
  _param: enabled { Boolean } Whether to turn bold on or off_
+
 
  set bold to true/false
 
-- #### setUnderline
+- *setUnderline*
  _param: enabled { Boolean } Whether to turn underline on or off_
+
 
  set underline to true/false
 
-- #### setTextAlignment
+- *setTextAlignment*
  _param: alignment { String } What to set the text alignment to_
+
 
  sets text alignment to 'left', 'center' or 'right'
 
-- #### separator
+- *separator*
  print horizontal line
 
-- #### cut
+- *cut*
  cuts paper
 
 
 
 ## Printer
 
-- #### connect
+- *connect*
  _param: manufacturerId { String } The usb device's manufacturer ID_
+ 
  _param: vendorId { String } The usb device's vendor ID_
+ 
  _param: callback { Function } called on completion_
+
 
  establishes a connection to the printer, taking control from the OS
 
-- #### disconnect
+- *disconnect*
  _param: callback { Function } called on completion_
+
 
  returns control of the printer to the OS and closes the connection to it
 
-- #### print
+- *print*
  _param: printJob { Object:PrintJob } The job to print_
+ 
  _param: callback { Function } called on completion_
+
 
  sends the commands in the printJob
 
