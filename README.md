@@ -11,6 +11,7 @@ Clone the repo `git clone https://github.com/carlevans719/node-excelvan.git`.
 Install dependencies:
 - _windows_  Install [Zagig](http://sourceforge.net/projects/libwdi/files/zadig/) then install a driver for the printer
 - Linux/Mac `sudo apt-get install libudev-dev`
+
 Then: `npm install`
 
 Plug in the printer.
