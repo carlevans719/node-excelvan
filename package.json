@@ -1,0 +1,42 @@
+{
+  "name": "node-excelvan",
+  "version": "0.1.1",
+  "description": "A nodejs library to manipulate ExcelVan ESC/POS printers.",
+  "homepage": "https://github.com/carlevans719/node-excelvan",
+  "author": "Carl Evans <carlevans71969@gmail.com>",
+  "license": "MIT",
+  "main": "escpos.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlevans719/node-excelvan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carlevans719/node-excelvan/issues"
+  },
+  "keywords": [
+    "escpos",
+    "usb",
+    "printer",
+    "receipt",
+    "thermal"
+  ],
+  "dependencies": {
+    "get-pixels": "^3.3.0",
+    "iconv-lite": "*",
+    "ink-docstrap": "^0.3.0-0",
+    "jimp": "^0.2.24",
+    "pdf-image": "^1.1.0",
+    "usb": "*"
+  },
+  "devDependencies": {
+    "nodeunit": "*",
+    "jsdoc": "*",
+    "grunt": "*",
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jsdoc": "*"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  }
+}
