@@ -63,87 +63,88 @@ myPrinter.print( myPrintJob, function () {
 
 ## PrintJob
 
-- *text*
+### text
  _param: text { String } The text to print_
 
+ __adds plain text to the output__
 
- adds plain text to the output
 
-- *newLine*
+### newLine
  _param: count { Number } How many new lines to print_
 
+ __prints a newline character__
 
- prints a newline character
 
-- *pad*
+### pad
  _param: count { Number } How much white-space (in vertical units)_
 
+ __adds vertical white-space__
 
- adds vertical white-space
 
-- *setTextFormat*
+### setTextFormat
  _param: format { String } The format to set_
-
 
  __(coming soon)__ set various aspects of font
 
-- *setFont*
+
+### setFont
  _param: font { String } The font to use. Either 'A' or 'B'_
 
-
- choose font A or font B
-
-- *setBold*
+ __choose font A or font B__
+ 
+ 
+### setBold#
  _param: enabled { Boolean } Whether to turn bold on or off_
 
+ __set bold to true/false__
 
- set bold to true/false
 
-- *setUnderline*
+### setUnderline
  _param: enabled { Boolean } Whether to turn underline on or off_
 
+ __set underline to true/false__
 
- set underline to true/false
 
-- *setTextAlignment*
+### setTextAlignment
  _param: alignment { String } What to set the text alignment to_
 
+ __sets text alignment to 'left', 'center' or 'right'__
 
- sets text alignment to 'left', 'center' or 'right'
 
-- *separator*
- print horizontal line
+### separator
+ __print horizontal line__
 
-- *cut*
- cuts paper
+
+### cut
+ __cuts paper__
 
 
 
 ## Printer
 
-- *connect*
+### connect
  _param: manufacturerId { String } The usb device's manufacturer ID_
  
  _param: vendorId { String } The usb device's vendor ID_
  
  _param: callback { Function } called on completion_
 
+ __establishes a connection to the printer, taking control from the OS__
 
- establishes a connection to the printer, taking control from the OS
 
-- *disconnect*
+### disconnect
  _param: callback { Function } called on completion_
 
+ __returns control of the printer to the OS and closes the connection to it__
 
- returns control of the printer to the OS and closes the connection to it
 
-- *print*
+### print
  _param: printJob { Object:PrintJob } The job to print_
  
  _param: callback { Function } called on completion_
 
 
- sends the commands in the printJob
+ __sends the commands in the printJob__
 
 
 
