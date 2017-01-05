@@ -7,8 +7,8 @@ A nodejs library to interact with the Excelvan (and possibly other) escpos print
 ## Getting started
 
 Install dependencies:
-- Windows  Install [Zagig](http://sourceforge.net/projects/libwdi/files/zadig/) then install a driver for the printer
-- Linux/Mac `sudo apt-get install libudev-dev`
+- Windows: Install [Zagig](http://sourceforge.net/projects/libwdi/files/zadig/) then install a driver for the printer
+- Linux: Run `sudo apt-get install libudev-dev`
 
 Install the module `npm install --save node-excelvan`
 
