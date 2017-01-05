@@ -1,6 +1,6 @@
 {
   "name": "node-excelvan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A nodejs library to manipulate ExcelVan ESC/POS printers.",
   "homepage": "https://github.com/carlevans719/node-excelvan",
   "author": "Carl Evans <carlevans71969@gmail.com>",
